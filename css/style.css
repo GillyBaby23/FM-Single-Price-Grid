@@ -1,0 +1,147 @@
+:root {
+  --primary-color: hsl(179, 62%, 43%);
+  --secondary-color: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --dark-gray: hsl(218, 22%, 67%);
+  --lighter-primary-color: hsla(179, 62%, 43%, 80%);
+  --default-padding: 3rem;
+  --default-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  --margin-bottom-md: 2.4rem;
+  --margin-bottom-sm: 1.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 62rem;
+  box-shadow: var(--default-box-shadow);
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.grid__join {
+  grid-column: 1 / span 2;
+  padding: 4rem 3rem;
+}
+
+.grid__join h1 {
+  font-size: 2.4rem;
+  color: var(--primary-color);
+  margin-bottom: var(--margin-bottom-md);
+}
+
+.grid__join h2 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: var(--margin-bottom-sm);
+}
+
+.grid__join p {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--dark-gray);
+  line-height: 1.8;
+}
+
+.grid__subs {
+  background-color: var(--primary-color);
+  padding: var(--default-padding);
+}
+
+.grid__subs h2 {
+  font-size: 1.8rem;
+  margin-bottom: var(--margin-bottom-md);
+}
+
+.grid__subs__price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: var(--margin-bottom-sm);
+}
+
+.grid__subs__price span {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.grid__subs__price p {
+  font-size: 1.6rem;
+  opacity: 0.5;
+}
+
+.grid__subs__desc {
+  font-size: 1.6rem;
+  margin-bottom: var(--margin-bottom-md);
+}
+
+.grid__subs__cta {
+  background-color: var(--secondary-color);
+  color: white;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 1.5rem 0;
+  width: 100%;
+  font-size: 1.6rem;
+  border-style: none;
+}
+
+.grid__why {
+  background-color: var(--lighter-primary-color);
+  padding: var(--default-padding);
+}
+
+.grid__why h2 {
+  font-size: 1.8rem;
+  margin-bottom: var(--margin-bottom-md);
+}
+
+.grid__why ul {
+  list-style: none;
+}
+
+.grid__why li {
+  font-size: 1.6rem;
+  color: var(--light-gray);
+  line-height: 1.3;
+  opacity: 0.8;
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid__join {
+    grid-column: auto;
+  }
+}
