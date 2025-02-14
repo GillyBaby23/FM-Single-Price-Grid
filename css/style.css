@@ -24,13 +24,14 @@ body {
   font-family: "Karla", sans-serif;
   font-weight: 400;
   color: white;
+  background-color: hsl(204, 43%, 93%);
 }
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -47,6 +48,7 @@ main {
 .grid__join {
   grid-column: 1 / span 2;
   padding: 4rem 3rem;
+  background-color: hsl(0, 0%, 100%);
 }
 
 .grid__join h1 {
